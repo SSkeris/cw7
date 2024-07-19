@@ -14,7 +14,7 @@ class Habit(models.Model):
                              help_text="где нужно выполнять привычку")
     time = models.DateTimeField(verbose_name="начало выполнения привычки", help_text="выберите дату и время начала")
     action = models.TextField(verbose_name="что нужно сделать", help_text="опишите действие, которое нужно сделать")
-    pleasant_habit_sigh = models.BooleanField(verbose_name="признак приятной привычки",
+    pleasant_habit_sign = models.BooleanField(verbose_name="признак приятной привычки",
                                               help_text="является ли привычка приятной", default=False)
     related_habit = models.ForeignKey("self", on_delete=models.CASCADE, verbose_name="связанная привычка",
                                       help_text="укажите связанную привычку", **NULLABLE)
